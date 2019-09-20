@@ -1,6 +1,7 @@
 import React, { useEffect } from 'react';
 import { useForm } from 'hooks/useForm';
 import { RenderCount } from 'hooks/RenderCount';
+import { Memoized } from 'hooks/Memoized';
 
 const UseStateHook = () => {
     const [values, SetValues] = useForm({ username: '', email: '' })
@@ -22,6 +23,7 @@ const UseStateHook = () => {
             <pre>
                 {JSON.stringify(values, null, 2)}
             </pre>
+            <Memoized />
         </>
     );
 }
