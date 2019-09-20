@@ -1,10 +1,10 @@
 import React from 'react'
-import { UseEffectHook } from 'hooks/UseEffectHook';
+import { UseReducerHook } from 'hooks/UseReducerHook';
 
 function App() {
   return (
     <div className="App">
-      <UseEffectHook />
+      <UseReducerHook />
     </div>
   );
 }
