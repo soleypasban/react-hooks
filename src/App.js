@@ -1,10 +1,10 @@
 import React from 'react'
-import { UseMemoHook } from 'hooks/UseMemoHook';
+import { UseContectHook } from 'hooks/UseContectHook';
 
 function App() {
   return (
     <div className="App">
-      <UseMemoHook />
+      <UseContectHook />
     </div>
   );
 }
