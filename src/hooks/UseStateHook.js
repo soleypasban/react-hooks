@@ -6,8 +6,8 @@ const FormExample = () => {
         username: ''
     })
 
-    const onSubmit = data => {
-        alert(data.username)
+    const onSubmit = () => {
+        alert(values.username)
     }
 
     return (
@@ -15,7 +15,7 @@ const FormExample = () => {
             <input type='text' name='username' value={values.username}
                 onChange={e => SetValues({ username: e.target.value })}
             />
-            <button onClick={() => onSubmit(values)}> Submit </button>
+            <button onClick={onSubmit}> Submit </button>
         </div>
     );
 }
