@@ -1,9 +1,8 @@
 import React from 'react';
 import { useForm } from 'hooks/useForm';
 
-const UseStateHook = () => {
+const UseEffectHook = () => {
     const [values, SetValues] = useForm({ username: '', email: '' })
-    const onSubmit = () => alert(values.username)
 
     return (
         <>
@@ -17,4 +16,4 @@ const UseStateHook = () => {
     );
 }
 
-export { UseStateHook }
+export { UseEffectHook }
