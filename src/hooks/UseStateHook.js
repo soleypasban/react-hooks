@@ -1,10 +1,17 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import { useForm } from 'hooks/useForm';
 import { RenderCount } from 'hooks/RenderCount';
 
 const UseStateHook = () => {
     const [values, SetValues] = useForm({ username: '', email: '' })
     const onSubmit = () => alert(values.username)
+
+    useEffect(() => {
+        console.log('Mounted')
+        return () => {
+            console.log('Unounted')
+        };
+    }, [])
 
     return (
         <>
