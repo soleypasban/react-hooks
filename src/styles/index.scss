@@ -41,3 +41,20 @@ button {
   font-size: 0.5rem;
   color: rgb(30, 168, 12);
 }
+
+.c-has-error {
+  border: 1px solid #ff0000;
+}
+
+.c-message-invalid {
+  color: #ff0000;
+  font-size: 0.5rem;
+}
+
+.c-input-row {
+  display: flex;
+  flex-direction: column;
+  border-bottom: 1px solid #999999;
+  padding: 1rem 0;
+  margin: 1rem 0;
+}

@@ -1,10 +1,10 @@
 import React from 'react'
-import { UseContectHook } from 'hooks/UseContectHook';
+import { UseStateFormikYup } from 'hooks/UseStateFormikYup';
 
 function App() {
   return (
     <div className="App">
-      <UseContectHook />
+      <UseStateFormikYup />
     </div>
   );
 }
