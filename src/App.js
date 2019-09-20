@@ -1,10 +1,10 @@
 import React from 'react'
-import { UseReducerHook } from 'hooks/UseReducerHook';
+import { UseCallbackHook } from 'hooks/UseCallbackHook';
 
 function App() {
   return (
     <div className="App">
-      <UseReducerHook />
+      <UseCallbackHook />
     </div>
   );
 }
