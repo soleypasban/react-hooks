@@ -1,6 +1,26 @@
 import React, { useState } from 'react';
 
-export const UseStateHook = () => {
+
+const FormExample = () => {
+    const [values, SetValues] = useState({
+        username: ''
+    })
+
+    const onSubmit = data => {
+        alert(data.username)
+    }
+
+    return (
+        <div className="App">
+            <input type='text' name='username' value={values.username}
+                onChange={e => SetValues({ username: e.target.value })}
+            />
+            <button onClick={() => onSubmit(values)}> Submit </button>
+        </div>
+    );
+}
+
+const CounterExample = () => {
     const [counter, setCounter] = useState(0)
     return (
         <div className="App">
@@ -10,3 +30,5 @@ export const UseStateHook = () => {
         </div>
     );
 }
+
+export const UseStateHook = FormExample
