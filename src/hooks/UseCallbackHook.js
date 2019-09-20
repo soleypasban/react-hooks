@@ -1,4 +1,4 @@
-import React, { useReducer } from 'react';
+import React, { useReducer, useCallback } from 'react';
 import { RenderCount } from 'hooks/RenderCount';
 
 function FormReducer(state, action) {
@@ -22,13 +22,15 @@ let oldFunction = null
 const UseCallbackHook = () => {
     const [values, dispatch] = useReducer(FormReducer, { username: '', email: '' })
 
-    const SetValues = e => dispatch({
-        type: 'UPDATE',
-        payload: {
-            name: e.target.name,
-            value: e.target.value
-        }
-    })
+    const SetValues = useCallback(
+        e => dispatch({
+            type: 'UPDATE',
+            payload: {
+                name: e.target.name,
+                value: e.target.value
+            }
+        })
+        , [])
 
     const isOldFunction = ((oldFunction === SetValues))
     oldFunction = SetValues
